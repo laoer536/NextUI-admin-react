@@ -12,6 +12,7 @@
   "dependencies": {
     "@fontsource-variable/inter": "^5.0.8",
     "@fontsource/noto-sans-sc": "^5.0.7",
+    "@heroicons/react": "^2.0.18",
     "@nextui-org/react": "^2.1.7",
     "framer-motion": "^10.16.1",
     "react": "^18.2.0",

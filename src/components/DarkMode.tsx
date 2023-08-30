@@ -1,16 +1,19 @@
+import { Switch } from '@nextui-org/react'
+import { MoonIcon, SunIcon } from '@heroicons/react/24/solid'
+
 type Themes = 'dark' | 'light'
 export default function DarkMode() {
   const [curTheme, setCurTheme] = useState<Themes>('light')
   const themeInit = () => {
-    setCurTheme(theme())
-    if (curTheme === 'light') {
+    const initTheme = theme()
+    setCurTheme(initTheme)
+    if (initTheme === 'light') {
       document.documentElement.classList.remove('dark')
     } else {
       document.documentElement.classList.add('dark')
     }
-    window.localStorage.setItem('theme', curTheme)
+    window.localStorage.setItem('theme', initTheme)
   }
-
   const handleToggleClick = () => {
     const element = document.documentElement
     element.classList.toggle('dark')
@@ -20,7 +23,7 @@ export default function DarkMode() {
   }
   const theme = (): Themes => {
     if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-      return (localStorage.getItem('theme') || 'light') as Themes
+      return localStorage.getItem('theme') as Themes
     }
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       return 'dark'
@@ -30,7 +33,15 @@ export default function DarkMode() {
   useEffect(themeInit, [])
   return (
     <div>
-      <button onClick={handleToggleClick}>{curTheme} Mode</button>
+      {/*<button onClick={handleToggleClick}>{curTheme} Mode</button>*/}
+      <Switch
+        isSelected={curTheme === 'dark'}
+        onValueChange={handleToggleClick}
+        size="lg"
+        color="secondary"
+        startContent={<SunIcon />}
+        endContent={<MoonIcon />}
+      />
     </div>
   )
 }
