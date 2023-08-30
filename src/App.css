@@ -1,0 +1,8 @@
+html,
+body {
+  @apply h-full text-foreground bg-background;
+}
+
+#app {
+  @apply absolute left-0 top-0 w-full max-h-full;
+}
