@@ -7,9 +7,11 @@ import { NextUIProvider } from '@nextui-org/react'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App.tsx'
 
+const basename = import.meta.env.VITE_ROUTER_BASE_NAME
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <NextUIProvider>
         <App />
       </NextUIProvider>
