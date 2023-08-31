@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom'
-import DarkMode from '../../components/DarkMode.tsx'
+import DarkMode from '@components/DarkMode'
 
 export default function IndexPage() {
   const location = useLocation()
