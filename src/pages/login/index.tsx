@@ -20,7 +20,7 @@ export default function LoginPage() {
           </p>
           <img src={businessSvg} alt="" className={'ml-10 mt-12 h-auto w-96'} />
         </div>
-        <div className={'flex-1 justify-center bg-background pt-40'}>
+        <div className={'flex-1 justify-center bg-white pt-40'}>
           <div className={'mx-auto w-[400px]'}>
             <div className={'text-center text-xl font-bold'}>Sign In to NextUI admin</div>
             <Spacer y={16} />
