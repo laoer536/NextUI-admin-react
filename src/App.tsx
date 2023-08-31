@@ -1,10 +1,10 @@
 import './App.css'
-import Routers from './router'
+import Router from './router'
 
 function App() {
   return (
     <div id="app">
-      <Routers />
+      <Router />
     </div>
   )
 }
