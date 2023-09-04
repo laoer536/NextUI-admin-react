@@ -3,8 +3,22 @@ import IndexPage from '@pages/index'
 import LoginPage from '@pages/login'
 import AboutPage from '@pages/about'
 export const routes: RouteObject[] = [
-  { path: '/', element: <IndexPage /> },
+  { path: '/', element: <IndexPage />, children: [{ path: '', element: <AboutPage /> }] },
   { path: 'login', element: <LoginPage /> },
-  { path: 'about', element: <AboutPage /> },
   { path: '*', element: <div>404</div> },
+]
+
+export const menus = [
+  {
+    id: '/',
+    label: 'Workplace',
+  },
+  {
+    id: 'music',
+    label: 'Music',
+  },
+  {
+    id: 'videos',
+    label: 'Videos',
+  },
 ]

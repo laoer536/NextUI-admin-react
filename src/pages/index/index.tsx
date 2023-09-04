@@ -1,12 +1,13 @@
-import { useLocation } from 'react-router-dom'
+import { useLocation, useMatches } from 'react-router-dom'
 import AdminBase from '@layouts/AdminBase.tsx'
 
 export default function IndexPage() {
   const location = useLocation()
-  console.log('location', location)
+  const Outlet = useOutlet() // Outlet=page
+  console.log('location', location, useMatches())
   return (
     <div>
-      <AdminBase>IndexPage</AdminBase>
+      <AdminBase>{Outlet}</AdminBase>
     </div>
   )
 }
