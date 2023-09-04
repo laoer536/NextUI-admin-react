@@ -1,9 +1,5 @@
 {
   "root": true,
   "env": { "browser": true, "es2020": true },
-  "extends": [".eslintrc-auto-import.json", "code-style-lint-react-ts"],
-  "rules": {
-    "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off"
-  }
+  "extends": [".eslintrc-auto-import.json", "code-style-lint-react-ts"]
 }
