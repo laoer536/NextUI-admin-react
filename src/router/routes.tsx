@@ -14,11 +14,11 @@ export const menus = [
     label: 'Workplace',
   },
   {
-    id: 'music',
-    label: 'Music',
+    id: 'form',
+    label: 'form',
   },
   {
-    id: 'videos',
-    label: 'Videos',
+    id: 'table',
+    label: 'table',
   },
 ]
