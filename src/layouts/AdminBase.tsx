@@ -14,7 +14,7 @@ export default function AdminBase(props: Props) {
       </div>
       <main className={'h-full pl-64'}>
         <Header />
-        <div className={'h-full pt-16'}> {children}</div>
+        <div className={'h-full pb-5 pr-10 pt-16'}> {children}</div>
       </main>
     </div>
   )

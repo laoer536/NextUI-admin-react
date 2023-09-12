@@ -37,7 +37,8 @@ export default function DarkMode() {
       <Switch
         isSelected={curTheme === 'dark'}
         onValueChange={handleToggleClick}
-        size="lg"
+        size="sm"
+        classNames={{ wrapper: 'mr-0' }}
         color="secondary"
         startContent={<SunIcon />}
         endContent={<MoonIcon />}
