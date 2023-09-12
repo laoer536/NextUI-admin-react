@@ -1,16 +1,26 @@
 import type { RouteObject } from 'react-router-dom'
 import IndexPage from '@pages/index'
 import LoginPage from '@pages/login'
-import AboutPage from '@pages/about'
+import WorkspacePage from '@pages/workspace'
+import FormPage from '@pages/form'
+import TablePage from '@pages/table'
 export const routes: RouteObject[] = [
-  { path: '/', element: <IndexPage />, children: [{ path: '', element: <AboutPage /> }] },
+  {
+    path: '/',
+    element: <IndexPage />,
+    children: [
+      { path: '', element: <WorkspacePage /> },
+      { path: '/form', element: <FormPage /> },
+      { path: '/table', element: <TablePage /> },
+    ],
+  },
   { path: 'login', element: <LoginPage /> },
   { path: '*', element: <div>404</div> },
 ]
 
 export const menus = [
   {
-    id: '/',
+    id: '',
     label: 'Workplace',
   },
   {
