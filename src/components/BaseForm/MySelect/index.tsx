@@ -1,12 +1,11 @@
-import { Select, SelectItem } from '@nextui-org/react'
-interface Props {
+import { Select, SelectItem, SelectProps } from '@nextui-org/react'
+interface Props extends SelectProps {
   options: { label: string; value: any }[]
 }
-
-export default function MySelect(props: Props) {
-  const { options } = props
+const MySelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
+  const { options, ...selectProps } = props
   return (
-    <Select label="Favorite Animal" placeholder="Select an animal">
+    <Select ref={ref} label="Favorite Animal" placeholder="Select an animal" {...selectProps}>
       {options.map((item) => (
         <SelectItem key={item.value} value={item.value}>
           {item.label}
@@ -14,4 +13,6 @@ export default function MySelect(props: Props) {
       ))}
     </Select>
   )
-}
+})
+
+export default MySelect
